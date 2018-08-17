@@ -312,7 +312,7 @@ public class AutoCaptureMain extends javax.swing.JFrame {
         initParam();
         setEnable(false);
         
-        taskManagement.setScheduler(AutoCaptureMain.scheduler);
+        taskManagement.setScheduler(txtScheduler.getText());
         taskManagement.start() ;
         lblStatus.setText("start");
     }//GEN-LAST:event_btnStartActionPerformed

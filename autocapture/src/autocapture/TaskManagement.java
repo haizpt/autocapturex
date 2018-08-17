@@ -18,6 +18,7 @@ public class TaskManagement implements Runnable {
     private final Logger log = Logger.getLogger(TaskManagement.class);
 
     private final List<Command> commands;
+    private final Object lock = new Object();
 
     private boolean running = false;
 
@@ -27,31 +28,33 @@ public class TaskManagement implements Runnable {
     public TaskManagement() {
         commands = new LinkedList<>();
         init = false;
-       
+
     }
-    
+
     public synchronized void setScheduler(String line) {
-        commands.clear();
         this.line = line.trim();
         loadCommand();
     }
 
     private boolean loadCommand() {
-        String[] args = line.split(" ");
-        if (args == null || args.length < 5) {
-            log.warn("line error, length < 5, abort =>" + line);
-            return false;
+        synchronized (lock) {
+            commands.clear();
+            String[] args = line.split(" ");
+            if (args == null || args.length < 5) {
+                log.warn("line error, length < 5, abort =>" + line);
+                return false;
+            }
+            Command c = new Command(args);
+            c.setTextPlain(line);
+            commands.add(c);
+            log.debug("command size: " + commands.size());
+            return true;
         }
-        Command c = new Command(args);
-        c.setTextPlain(line);
-        commands.add(c);
-        log.debug("command size: " + commands.size());
-        return true;
     }
 
     public void start() {
         running = true;
-        
+
         if (init) {
             loadCommand();
             return;
@@ -64,18 +67,25 @@ public class TaskManagement implements Runnable {
     }
 
     public void stop() {
-        commands.clear();
-        running = false;
+        synchronized (lock) {
+            commands.clear();
+            running = false;
+        }
     }
 
     private synchronized List<Command> getRunCommand() {
-        List<Command> runCommands = new LinkedList<>();
-        for (Command c : commands) {
-            if (c.isRuntime()) {
-                runCommands.add(c);
+         synchronized (lock) {
+             if (commands.isEmpty()) {
+                 return null;
+             }
+            List<Command> runCommands = new LinkedList<>();
+            for (Command c : commands) {
+                if (c.isRuntime()) {
+                    runCommands.add(c);
+                }
             }
-        }
-        return runCommands;
+            return runCommands;
+         }
     }
 
     @Override
@@ -83,8 +93,9 @@ public class TaskManagement implements Runnable {
         while (true) {
             try {
                 if (!running) {
+                    log.info("not running");
                     Thread.sleep(15000);//sleep 15s
-                    return;
+                    continue;
                 }
 
                 List<Command> runCommands = getRunCommand();
@@ -93,7 +104,7 @@ public class TaskManagement implements Runnable {
                         TaskQueue.getInstance().enqueue(command.getCommand());
                     }
                 } else {
-                    log.debug("nothing to run");
+                    log.info("nothing to run");
                 }
 
                 Thread.sleep(15000);//sleep 15s

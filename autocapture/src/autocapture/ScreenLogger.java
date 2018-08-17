@@ -75,7 +75,7 @@ public class ScreenLogger implements Runnable {
             try {
                 if (!running) {
                     Thread.sleep(1000);//sleep 15s
-                    return;
+                    continue;
                 }
 
                 String logString = dequeue();
@@ -88,7 +88,7 @@ public class ScreenLogger implements Runnable {
                         txaLog.append(logString + "\n");
                     }
                     
-                    log.info("nothing to run");
+                    log.info(logString);
                 } else {
                     log.debug("nothing to run");
                 }
