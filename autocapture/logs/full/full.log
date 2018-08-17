@@ -1,0 +1,76 @@
+2018-08-17 14:13:13,910 (TaskManagement.java:loadCommand(42)) - line error, length < 5, abort =>0 22,23,0,1,2,3,4,5,6,7 * *
+2018-08-17 14:13:26,260 (TaskManagement.java:loadCommand(42)) - line error, length < 5, abort =>0 22,23,0,1,2,3,4,5,6,7 * *
+2018-08-17 14:13:46,988 (TaskManagement.java:loadCommand(42)) - line error, length < 5, abort =>*/2 * * *
+2018-08-17 14:13:46,989 (TaskManagement.java:loadCommand(42)) - line error, length < 5, abort =>*/2 * * *
+2018-08-17 14:15:10,754 (TaskQueue.java:getInstance(37)) - length of excutor: 3
+2018-08-17 14:15:10,925 (TaskQueue.java:enqueue(54)) - enqueue queue:  , now
+2018-08-17 14:15:10,925 (TaskQueue.java:enqueue(55)) - size of queue: 1
+2018-08-17 14:15:11,020 (TaskExcutor.java:process(102)) - TaskExcutor-2,  total records:  in (ms) 94
+2018-08-17 14:17:09,033 (TaskQueue.java:getInstance(37)) - length of excutor: 3
+2018-08-17 14:17:09,176 (TaskQueue.java:enqueue(54)) - enqueue queue:  , now
+2018-08-17 14:17:09,177 (TaskQueue.java:enqueue(55)) - size of queue: 1
+2018-08-17 14:17:09,251 (TaskExcutor.java:process(102)) - TaskExcutor-2,  total records:  in (ms) 74
+2018-08-17 14:19:44,760 (TaskQueue.java:getInstance(37)) - length of excutor: 3
+2018-08-17 14:19:44,920 (TaskQueue.java:enqueue(54)) - enqueue queue:  , now
+2018-08-17 14:19:44,920 (TaskQueue.java:enqueue(55)) - size of queue: 1
+2018-08-17 14:20:54,606 (TaskQueue.java:getInstance(37)) - length of excutor: 3
+2018-08-17 14:20:54,741 (TaskQueue.java:enqueue(54)) - enqueue queue:  , now
+2018-08-17 14:20:54,741 (TaskQueue.java:enqueue(55)) - size of queue: 1
+2018-08-17 14:21:54,743 (TaskQueue.java:enqueue(54)) - enqueue queue:  , now
+2018-08-17 14:21:54,743 (TaskQueue.java:enqueue(55)) - size of queue: 1
+2018-08-17 14:22:16,623 (TaskExcutor.java:process(102)) - TaskExcutor-1,  total records:  in (ms) 81881
+2018-08-17 14:23:47,343 (TaskQueue.java:getInstance(37)) - length of excutor: 3
+2018-08-17 14:23:47,486 (TaskQueue.java:enqueue(54)) - enqueue queue:  , now
+2018-08-17 14:23:47,486 (TaskQueue.java:enqueue(55)) - size of queue: 1
+2018-08-17 14:25:31,022 (TaskQueue.java:getInstance(37)) - length of excutor: 3
+2018-08-17 14:25:32,722 (TaskQueue.java:enqueue(54)) - enqueue queue:  , now
+2018-08-17 14:25:32,722 (TaskQueue.java:enqueue(55)) - size of queue: 1
+2018-08-17 14:26:52,062 (TaskQueue.java:getInstance(37)) - length of excutor: 3
+2018-08-17 14:26:52,196 (TaskQueue.java:enqueue(54)) - enqueue queue:  , now
+2018-08-17 14:26:52,196 (TaskQueue.java:enqueue(55)) - size of queue: 1
+2018-08-17 14:27:52,199 (TaskQueue.java:enqueue(54)) - enqueue queue:  , now
+2018-08-17 14:27:52,200 (TaskQueue.java:enqueue(55)) - size of queue: 1
+2018-08-17 14:29:06,149 (TaskQueue.java:getInstance(37)) - length of excutor: 3
+2018-08-17 14:29:06,273 (TaskQueue.java:enqueue(54)) - enqueue queue:  , now
+2018-08-17 14:29:06,274 (TaskQueue.java:enqueue(55)) - size of queue: 1
+2018-08-17 14:29:31,317 (TaskExcutor.java:process(102)) - TaskExcutor-2,  total records:  in (ms) 25043
+2018-08-17 14:30:06,277 (TaskQueue.java:enqueue(54)) - enqueue queue:  , now
+2018-08-17 14:30:06,278 (TaskQueue.java:enqueue(55)) - size of queue: 1
+2018-08-17 14:30:53,400 (TaskExcutor.java:process(102)) - TaskExcutor-2,  total records:  in (ms) 22083
+2018-08-17 14:31:18,691 (TaskQueue.java:enqueue(54)) - enqueue queue:  , now
+2018-08-17 14:31:18,691 (TaskQueue.java:enqueue(55)) - size of queue: 1
+2018-08-17 14:32:15,751 (TaskExcutor.java:process(102)) - TaskExcutor-2,  total records:  in (ms) 22349
+2018-08-17 14:32:18,694 (TaskQueue.java:enqueue(54)) - enqueue queue:  , now
+2018-08-17 14:32:18,694 (TaskQueue.java:enqueue(55)) - size of queue: 1
+2018-08-17 14:33:17,005 (TaskExcutor.java:process(102)) - TaskExcutor-1,  total records:  in (ms) 10729
+2018-08-17 14:33:18,696 (TaskQueue.java:enqueue(54)) - enqueue queue:  , now
+2018-08-17 14:33:18,697 (TaskQueue.java:enqueue(55)) - size of queue: 1
+2018-08-17 14:33:33,697 (TaskQueue.java:enqueue(54)) - enqueue queue:  , now
+2018-08-17 14:33:33,697 (TaskQueue.java:enqueue(55)) - size of queue: 2
+2018-08-17 14:47:35,928 (TaskQueue.java:getInstance(37)) - length of excutor: 3
+2018-08-17 14:47:36,062 (TaskQueue.java:enqueue(54)) - enqueue queue:  , now
+2018-08-17 14:47:36,063 (TaskQueue.java:enqueue(55)) - size of queue: 1
+2018-08-17 14:47:44,829 (ScreenLogger.java:run(91)) - nothing to run
+2018-08-17 14:47:59,831 (ScreenLogger.java:run(91)) - nothing to run
+2018-08-17 14:48:41,048 (TaskQueue.java:getInstance(37)) - length of excutor: 3
+2018-08-17 14:48:41,181 (TaskQueue.java:enqueue(54)) - enqueue queue:  , now
+2018-08-17 14:48:41,181 (TaskQueue.java:enqueue(55)) - size of queue: 1
+2018-08-17 14:48:41,347 (ScreenLogger.java:run(91)) - nothing to run
+2018-08-17 14:48:41,548 (ScreenLogger.java:run(91)) - nothing to run
+2018-08-17 14:48:41,749 (ScreenLogger.java:run(91)) - nothing to run
+2018-08-17 14:48:52,558 (ScreenLogger.java:run(91)) - nothing to run
+2018-08-17 14:48:52,758 (ScreenLogger.java:run(91)) - nothing to run
+2018-08-17 14:49:41,184 (TaskQueue.java:enqueue(54)) - enqueue queue:  , now
+2018-08-17 14:49:41,185 (TaskQueue.java:enqueue(55)) - size of queue: 1
+2018-08-17 14:49:52,404 (ScreenLogger.java:run(91)) - nothing to run
+2018-08-17 14:49:52,805 (ScreenLogger.java:run(91)) - nothing to run
+2018-08-17 14:49:53,005 (ScreenLogger.java:run(91)) - nothing to run
+2018-08-17 14:50:03,414 (ScreenLogger.java:run(91)) - nothing to run
+2018-08-17 14:50:03,614 (ScreenLogger.java:run(91)) - nothing to run
+2018-08-17 14:50:41,187 (TaskQueue.java:enqueue(54)) - enqueue queue:  , now
+2018-08-17 14:50:41,187 (TaskQueue.java:enqueue(55)) - size of queue: 1
+2018-08-17 14:51:03,257 (ScreenLogger.java:run(91)) - nothing to run
+2018-08-17 14:51:03,674 (ScreenLogger.java:run(91)) - nothing to run
+2018-08-17 14:51:03,874 (ScreenLogger.java:run(91)) - nothing to run
+2018-08-17 14:51:14,082 (ScreenLogger.java:run(91)) - nothing to run
+2018-08-17 14:51:14,282 (ScreenLogger.java:run(91)) - nothing to run
