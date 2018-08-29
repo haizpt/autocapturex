@@ -31,6 +31,8 @@
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="btnStop" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
+              <Component id="btnHotRun" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
           </Group>
           <Group type="102" attributes="0">
               <Component id="jLabel1" min="-2" pref="222" max="-2" attributes="0"/>
@@ -45,8 +47,11 @@
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="btnStart" pref="41" max="32767" attributes="0"/>
-                  <Component id="btnStop" max="32767" attributes="0"/>
+                  <Component id="btnHotRun" pref="41" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="btnStart" pref="41" max="32767" attributes="0"/>
+                      <Component id="btnStop" max="32767" attributes="0"/>
+                  </Group>
               </Group>
               <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
               <Component id="jTabbedPane1" max="32767" attributes="0"/>
@@ -400,6 +405,14 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnStopActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnHotRun">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Do it now!"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnHotRunActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

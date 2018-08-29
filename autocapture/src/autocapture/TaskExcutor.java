@@ -92,7 +92,7 @@ public class TaskExcutor implements Runnable{
     private static final String CONTEXT_FILE_TOKEN="${TOKEN}";
     private static final String CONTEXT_FILE_QUERYITEM="${QUERYID}";
     
-    private void process(Task task) {
+    public static void process(Task task) {
         long startTime = System.currentTimeMillis();
         ScreenLogger logger = AutoCaptureMain.getLogger();
         
@@ -117,7 +117,7 @@ public class TaskExcutor implements Runnable{
     }
     
     
-    private String capture() {
+    private static String capture() {
         String fileName = null;
         try {
             Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();

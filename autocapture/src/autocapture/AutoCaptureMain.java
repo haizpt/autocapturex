@@ -76,6 +76,7 @@ public class AutoCaptureMain extends javax.swing.JFrame {
         lblStatus = new javax.swing.JLabel();
         btnStart = new javax.swing.JButton();
         btnStop = new javax.swing.JButton();
+        btnHotRun = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -274,6 +275,13 @@ public class AutoCaptureMain extends javax.swing.JFrame {
             }
         });
 
+        btnHotRun.setText("Do it now!");
+        btnHotRun.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnHotRunActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -284,7 +292,9 @@ public class AutoCaptureMain extends javax.swing.JFrame {
                 .addComponent(btnStart)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnStop)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnHotRun)
+                .addGap(74, 74, 74))
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
@@ -296,8 +306,10 @@ public class AutoCaptureMain extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnStart, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)
-                    .addComponent(btnStop, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btnHotRun, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(btnStart, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)
+                        .addComponent(btnStop, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGap(9, 9, 9)
                 .addComponent(jTabbedPane1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -380,6 +392,12 @@ public class AutoCaptureMain extends javax.swing.JFrame {
         TaskExcutor.sendEmail(null);
     }//GEN-LAST:event_btnSendTestEmailActionPerformed
 
+    private void btnHotRunActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHotRunActionPerformed
+        // TODO add your handling code here:
+        initParam();
+        TaskExcutor.process(null);
+    }//GEN-LAST:event_btnHotRunActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -432,6 +450,7 @@ public class AutoCaptureMain extends javax.swing.JFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnHotRun;
     private javax.swing.JButton btnSendTestEmail;
     private javax.swing.JButton btnStart;
     private javax.swing.JButton btnStop;
